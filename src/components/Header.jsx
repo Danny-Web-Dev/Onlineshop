@@ -7,9 +7,9 @@ const Header = ({ cart, onUpdateCartItemQuantity }) => {
 
 	const cartQuantity = cart.items.length;
 
-	function handleOpenCartClick() {
+	const handleOpenCartClick = () => {
 		modal.current.open();
-	}
+	};
 
 	let modalActions = <button>Close</button>;
 
