@@ -9,9 +9,7 @@ const App = () => {
 		items: [],
 	});
 
-	console.log('test');
-
-	function handleAddItemToCart(id) {
+	const handleAddItemToCart = (id) => {
 		setShoppingCart((prevShoppingCart) => {
 			const updatedItems = [...prevShoppingCart.items];
 
@@ -38,9 +36,9 @@ const App = () => {
 				items: updatedItems,
 			};
 		});
-	}
+	};
 
-	function handleUpdateCartItemQuantity(productId, amount) {
+	const handleUpdateCartItemQuantity = (productId, amount) => {
 		setShoppingCart((prevShoppingCart) => {
 			const updatedItems = [...prevShoppingCart.items];
 			const updatedItemIndex = updatedItems.findIndex((item) => item.id === productId);
@@ -61,7 +59,7 @@ const App = () => {
 				items: updatedItems,
 			};
 		});
-	}
+	};
 
 	return (
 		<>
