@@ -9,6 +9,8 @@ const App = () => {
 		items: [],
 	});
 
+	console.log('test');
+
 	function handleAddItemToCart(id) {
 		setShoppingCart((prevShoppingCart) => {
 			const updatedItems = [...prevShoppingCart.items];
