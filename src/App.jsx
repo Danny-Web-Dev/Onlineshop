@@ -14,7 +14,7 @@ const App = () => {
 		setShoppingCart((prevShoppingCart) => {
 			const updatedItems = [...prevShoppingCart.items];
 
-			const existingCartItemIndex = updatedItems.findIndex((cartItem) => cartItem.id === id);
+			const existingCartItemIndex = updatedItems.findIndex((cartItems) => cartItem.id === id);
 			const existingCartItem = updatedItems[existingCartItemIndex];
 
 			if (existingCartItem) {
