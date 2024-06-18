@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import CartModal from './CartModal.jsx';
 
-const Header = ({ cart, onUpdateCartItemQuantity }) => {
+const Header = ({ cart }) => {
 	const modal = useRef();
 
 	const cartQuantity = cart.items.length;
@@ -24,7 +24,7 @@ const Header = ({ cart, onUpdateCartItemQuantity }) => {
 
 	return (
 		<>
-			<CartModal ref={modal} cartItems={cart.items} onUpdateCartItemQuantity={onUpdateCartItemQuantity} title='Your Cart' actions={modalActions} />
+			<CartModal ref={modal} cartItems={cart.items} title='Your Cart' actions={modalActions} />
 			<header id='main-header'>
 				<div id='main-title'>
 					<img src='logo.png' alt='Elegant model' />
