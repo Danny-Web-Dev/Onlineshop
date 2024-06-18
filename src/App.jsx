@@ -11,6 +11,12 @@ const App = () => {
 		items: [],
 	});
 
+	const ctxValue = {
+		items: shoppingCart.items,
+		addItemToCart: handleAddItemToCart,
+		updateItemInCart: handleUpdateCartItemQuantity,
+	};
+
 	const handleAddItemToCart = (id) => {
 		setShoppingCart((prevShoppingCart) => {
 			const updatedItems = [...prevShoppingCart.items];
@@ -61,12 +67,6 @@ const App = () => {
 				items: updatedItems,
 			};
 		});
-	};
-
-	const ctxValue = {
-		items: shoppingCart.items,
-		addItemToCart: handleAddItemToCart,
-		updateItemInCart: handleUpdateCartItemQuantity,
 	};
 
 	return (
