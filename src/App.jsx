@@ -72,7 +72,7 @@ const App = () => {
 	return (
 		<>
 			<CartContext.Provider value={ctxValue}>
-				<Header cart={shoppingCart} />
+				<Header />
 				<Shop>
 					{DUMMY_PRODUCTS.map((product) => (
 						<li key={product.id}>
