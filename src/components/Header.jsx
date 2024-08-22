@@ -3,7 +3,7 @@ import { useRef, useContext } from 'react';
 import CartModal from './CartModal.jsx';
 import { CartContext } from '../store/shopphingCartContext.jsx';
 
-const Header = ({ cart }) => {
+const Header = () => {
 	const modal = useRef();
 	const { items } = useContext(CartContext);
 	const cartQuantity = items.length;
